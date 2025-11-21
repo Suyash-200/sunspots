@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * Theme hooks and preprocess functions for Sunspots Holidays theme.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Conditionally attach the React app library only on the front page or node 1.
+ */
+function sunspotsholidays_page_attachments(array &$attachments) {
+  $route_match = \Drupal::routeMatch();
+  $route_name = $route_match->getRouteName();
+  
+  // Check if this is the front page
+  $is_front = \Drupal::service('path.matcher')->isFrontPage();
+  
+  // Check if this is node 1
+  $is_node_1 = FALSE;
+  if ($route_name === 'entity.node.canonical') {
+    $node = $route_match->getParameter('node');
+    if ($node && $node->id() == 1) {
+      $is_node_1 = TRUE;
+    }
+  }
+  
+  // Only attach React app on front page or node 1
+  if ($is_front || $is_node_1) {
+    $attachments['#attached']['library'][] = 'sunspotsholidays/react-app';
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * Add variables to page template.
+ */
+function sunspotsholidays_preprocess_page(&$variables) {
+  $route_match = \Drupal::routeMatch();
+  $route_name = $route_match->getRouteName();
+  
+  // Check if this is the front page
+  $is_front = \Drupal::service('path.matcher')->isFrontPage();
+  
+  // Check if this is node 1
+  $is_node_1 = FALSE;
+  if ($route_name === 'entity.node.canonical') {
+    $node = $route_match->getParameter('node');
+    if ($node && $node->id() == 1) {
+      $is_node_1 = TRUE;
+    }
+  }
+  
+  // Add variable to indicate if React app should be shown
+  $variables['show_react_app'] = $is_front || $is_node_1;
+}
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * Add variables to node template.
+ */
+function sunspotsholidays_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  
+  // Check if this is node 1
+  $is_node_1 = FALSE;
+  if ($node && $node->id() == 1) {
+    $is_node_1 = TRUE;
+  }
+  
+  // Check if this is the front page
+  $is_front = \Drupal::service('path.matcher')->isFrontPage();
+  
+  // Add variable to indicate if React app should be shown
+  $variables['show_react_app'] = $is_front || $is_node_1;
+}
+
