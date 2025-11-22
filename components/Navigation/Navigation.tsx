@@ -17,7 +17,7 @@ interface NavigationProps {
 // Mock navigation data - can be replaced with API call later
 const mockNavigation: NavigationItem[] = [
   {
-    title: 'ABOUT US',
+    title: 'About',
     url: '/destinations',
     children: [
       { title: 'OUR TEAM', url: '/destinations/africa' },
@@ -34,7 +34,7 @@ const mockNavigation: NavigationItem[] = [
     ],
   },
   {
-    title: 'VOYZANT CARES',
+    title: 'Special Packages',
     url: '/experiences',
     // children: [
     //   { title: 'Active & Adventure', url: '/experiences/adventure' },
@@ -48,21 +48,29 @@ const mockNavigation: NavigationItem[] = [
     // ],
   },
   {
-    title: 'SERVICES',
+    title: 'Flights',
     url: '/inspiration',
   },
   {
-    title: 'CONTACT',
+    title: 'Weekly E-Flyers',
     url: '/specials',
   },
-  // {
-  //   title: 'About',
-  //   url: '/about',
-  // },
-  // {
-  //   title: 'Contact',
-  //   url: '/contact',
-  // },
+  {
+    title: 'Groups',
+    url: '/about',
+  },
+  {
+    title: 'E-Brochure',
+    url: '/contact',
+  },
+  {
+    title: 'Truesun Rewards',
+    url: '/contact',
+  },
+  {
+    title: 'PNR Transfer',
+    url: '/contact',
+  },
 ];
 
 const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
@@ -77,7 +85,7 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
 
   // Add Home to menu items
   const allMenuItems: NavigationItem[] = [
-    { title: 'TRAVEL CONSOLIDATOR', url: '/' },
+    { title: 'Home', url: '/' },
     ...menuItems,
   ];
 

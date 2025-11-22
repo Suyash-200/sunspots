@@ -1,53 +1,49 @@
-"use client";
+// components/WelcomeSection/WelcomeSection.tsx
+import React from 'react';
 
-import React from "react";
-
-interface Paragraph {
-  id: string;
-  title: string;
-  body: string; // contains full_html
-}
-
-interface WelcomeSectionProps {
-  paragraphs: Paragraph[];
-}
-
-const WelcomeSection: React.FC<WelcomeSectionProps> = ({ paragraphs }) => {
-  if (!paragraphs || paragraphs.length === 0) return null;
-
+const WelcomeSection: React.FC = () => {
   return (
-    <section className="py-16 bg-[#fffef9]">
-      <div className="max-w-6xl mx-auto px-4">
-
-        {/* Main Heading + Intro Paragraph */}
-        <div className="text-center mb-12">
-          {/* Extracting heading from body HTML automatically */}
-          <div
-            className="text-3xl md:text-4xl font-bold text-[#c68400] mb-4"
-            dangerouslySetInnerHTML={{ __html: paragraphs[0].body.match(/<h2[^>]*>(.*?)<\/h2>/)?.[0] || "" }}
-          />
-
-          {/* Lead paragraph */}
-          <div
-            className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
-            dangerouslySetInnerHTML={{
-              __html: paragraphs[0].body.replace(/<h2[^>]*>(.*?)<\/h2>/, "")
-            }}
-          />
+    <section className="home-section home-section--welcome" data-section-type="welcome">
+      <div className="home-section__content">
+        {/* Welcome Main Paragraph */}
+        <div className="home-section__paragraph home-section__paragraph--welcome-main">
+          <div className="home-section__paragraph-body">
+            <h2>Welcome to Sleepers Holidays' 55th Anniversary</h2>
+            <p className="lead">
+              For 55 years, we've been planning tailor-made trips for travellers. With decades of experience and an Excellent rating and nearly 5,000 verified TrustPilot reviews, you can rely on the trusted travel experts at Sleepers Holidays to plan your next tailor-made trip. Enjoy the best service in the business while we plan a vacation that's perfect for you.
+            </p>
+          </div>
         </div>
 
-        {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {paragraphs.slice(1).map((feature) => (
-            <div
-              key={feature.id}
-              className="bg-white border border-yellow-300 shadow-md rounded-xl p-6 hover:shadow-lg transition-all"
-            >
-              <div className="text-gray-800" dangerouslySetInnerHTML={{ __html: feature.body }} />
+        {/* Welcome Features Grid */}
+        <div className="home-section__paragraph home-section__paragraph--welcome-features">
+          <div className="home-section__content">
+            <div className="feature-card">
+              <h3>Tailor-made vacations as unique as you are</h3>
+              <p>Every trip is customized to your preferences, interests, and travel style.</p>
             </div>
-          ))}
+            
+            <div className="feature-card">
+              <h3>24/7/365 support to ensure your trip is perfect</h3>
+              <p>Round-the-clock assistance before, during, and after your journey.</p>
+            </div>
+            
+            <div className="feature-card">
+              <h3>Authentic experts who know your destinations</h3>
+              <p>Our travel specialists have first-hand knowledge of every destination we offer.</p>
+            </div>
+            
+            <div className="feature-card">
+              <h3>Global adventures to 115 destinations, your way</h3>
+              <p>From tropical beaches to arctic expeditions, we cover the globe.</p>
+            </div>
+            
+            <div className="feature-card">
+              <h3>Elevated journeys with 5-star stays and private tours</h3>
+              <p>Luxury accommodations and exclusive experiences designed for discerning travelers.</p>
+            </div>
+          </div>
         </div>
-
       </div>
     </section>
   );

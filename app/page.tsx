@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import HomeSection from "@/components/HomeSection/HomeSection";
 import DestinationsGrid from "@/components/DestinationsGrid/DestinationsGrid";
@@ -7,7 +6,7 @@ import { fetchHomeSections } from "@/lib/api";
 import { HomeSection as HomeSectionType } from "@/lib/types";
 import { getSampleData, getSampleDestinations } from "@/lib/data";
 import { initScrollAnimations } from "@/lib/scrollAnimations";
-// import WelcomeSection from "@/components/WelcomeSection/WelcomeSection";
+import WelcomeSection from "@/components/WelcomeSection/WelcomeSection";
 import "./page.css";
 
 export default function HomePage() {
@@ -60,7 +59,7 @@ export default function HomePage() {
   // Render section - use Drupal content if available, otherwise use static component
   const renderSection = (
     sectionType: string,
-      StaticComponent?: React.ComponentType
+    StaticComponent?: React.ComponentType
   ) => {
     const section = getSection(sectionType);
 
@@ -72,6 +71,12 @@ export default function HomePage() {
           title={section.title}
           paragraphs={section.paragraphs}
           image={section.image}
+          carousel={section.carousel}
+          media={section.media} // Add media for about section
+          stats={section.stats} // Add stats for about section
+          partners={section.partners} // Add partners for air_partners section
+          deals={section.deals} // Add deals for special_deals section
+          services={section.services} // Add services for services section
         />
       );
     } else if (StaticComponent) {
@@ -86,14 +91,29 @@ export default function HomePage() {
       {/* Hero Section */}
       {renderSection("hero")}
 
+      {/* About Section - Added after hero */}
+      {renderSection("about")}
+
+      {/* Air Partners Section */}
+      {renderSection("air_partners")}
+
+      {/* Special Deals Section */}
+      {renderSection("special_deals")}
+
+      {/* Services Section */}
+      {renderSection("services")}
+
+      {/* Land Partners Section */}
+      {renderSection("land_partners")}
+
       {/* Welcome Section */}
-      {renderSection("welcome")}
+      {/* {renderSection("welcome", WelcomeSection)} */}
 
       {/* Travel Styles Section */}
       {/* {renderSection("trip_styles")} */}
 
       {/* Destinations Section */}
-      {getSection("destinations") ? (
+      {/* {getSection("destinations") ? (
         <>
           {renderSection("destinations")}
           {destinations.length > 0 && (
@@ -118,16 +138,16 @@ export default function HomePage() {
             <DestinationsGrid destinations={destinations} />
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Travel Inspiration Section */}
       {/* {renderSection("travel_inspiration")} */}
 
       {/* Testimonials Section */}
-      {renderSection("testimonials")}
+      {/* {renderSection("testimonials")} */}
 
       {/* Specials Section */}
-      {renderSection("specials")}
+      {/* {renderSection("specials")} */}
 
       {/* Newsletter Section */}
       {/* {renderSection("newsletter")} */}
