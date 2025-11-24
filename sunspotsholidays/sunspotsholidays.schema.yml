@@ -1,9 +1,0 @@
-sunspotsholidays.settings:
-  type: config_object
-  label: 'Sunspots Holidays Settings'
-  mapping:
-    use_mock_data:
-      type: boolean
-      label: 'Use Mock Data'
-      description: 'If enabled, the frontend will use static JSON data instead of Drupal API. Useful for development and testing.'
-

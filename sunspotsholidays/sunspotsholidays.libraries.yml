@@ -1,6 +1,0 @@
-global:
-  css:
-    theme:
-      dist/react-app.css: {}
-  js:
-    dist/react-app.js: {}
