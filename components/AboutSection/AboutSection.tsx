@@ -57,7 +57,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               width: item.width ? `${item.width}px` : 'auto',
               height: item.height ? `${item.height}px` : 'auto',
               maxWidth: '100%',
-              height: 'auto'
             }}
           />
         </div>
