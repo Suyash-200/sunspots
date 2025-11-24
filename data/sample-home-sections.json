@@ -70,6 +70,12 @@
       "title": "about-history-1",
       "body": "Our story begins in January 1974, when Campbell Travel Limited emerged as a new travel agency in Ontario. After many years of service to travellers, Campbell Travel decided to shift its focus, becoming a strictly wholesale travel company, and the new enterprise was soon known simply as Sunspots Holidays.",
       "body_format": "plain_text"
+    },
+    {
+      "id": "46",
+      "title": "about-history-2",
+      "body": "Our story begins in January 1974, when Campbell Travel Limited emerged as a new travel agency in Ontario. After many years of service to travellers, Campbell Travel decided to shift its focus, becoming a strictly wholesale travel company, and the new enterprise was soon known simply as Sunspots Holidays.",
+      "body_format": "plain_text"
     }
   ],
   "media": [
@@ -307,46 +313,46 @@
       "created": "2024-01-20T10:00:00Z",
       "changed": "2024-01-20T10:00:00Z"
     },
+   {
+  "id": "13",
+  "title": "Our Services",
+  "section_type": "services",
+  "paragraphs": [],
+  "services": [
     {
-      "id": "13",
-      "title": "Our Services",
-      "section_type": "services",
-      "paragraphs": [],
-"services": [
-  {
-    "id": "service-1",
-    "title": "Sunspots Holidays",
-    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
-    "description": "Awesome airlines, beautiful places – that's the Sunspots Holidays experience! Your clients will fall in love with our unique specialty packages that span the globe. From our hallmark Sun Magic and Positive Destination Ideas lines, to weddings, group travel and our new Mission Holidays line, there's something for everyone."
-  },
-  {
-    "id": "service-2",
-    "title": "Sun Magic",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-    "description": "The sun is always calling! Let Sunspots Holidays whisk your clients away to the beautiful beaches of the Caribbean, Latin America, the Maldives or Kerala, India. Our signature blend of romance, rejuvenation and exotic locales is the perfect antidote to your clients' hectic daily schedule."
-  },
-  {
-    "id": "service-3",
-    "title": "Mission Travel & Pilgrimage",
-    "image": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
-    "description": "Sunspots Holidays has developed packages that make it easier for your clients to experience life-changing spiritual travel. Whether they're headed to Africa or Central or South America to provide humanitarian aid or build homes or schools, or are embarking on a deeply personal pilgrimage to a holy shrine, we can help them get there."
-  },
-  {
-    "id": "service-4",
-    "title": "Positive Destination Ideas",
-    "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
-    "description": "Jet away to any city in the world for a quick trip packed with fun and excitement! Soak up the entertainment in New York City, tour the historic and hilly San Francisco Bay Area, or bask in the old world charm of Vienna. We offer packages to more than 100 U.S. cities, over 40 Latin American urban centers, and 30-plus cities in Europe."
-  },
-  {
-    "id": "service-5",
-    "title": "TrueSun Rewards",
-    "image": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80",
-    "description": "Agents can collect booking incentives in the form of money, gift cards or travel credits for every booking with Sunspots Holidays, or they can donate the value to their favourite charities!"
-  }
-],
-      "created": "2024-01-20T10:00:00Z",
-      "changed": "2024-01-20T10:00:00Z"
+      "id": "service-1",
+      "title": "Sunspots Holidays",
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
+      "description": "Awesome airlines, beautiful places – that's the Sunspots Holidays experience! Your clients will fall in love with our unique specialty packages that span the globe. From our hallmark Sun Magic and Positive Destination Ideas lines."
     },
+    {
+      "id": "service-2",
+      "title": "Sun Magic",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "description": "The sun is always calling! Let Sunspots Holidays whisk your clients away to the beautiful beaches of the Caribbean, Latin America, the Maldives or Kerala, India. Our signature blend of romance."
+    },
+    {
+      "id": "service-3",
+      "title": "Mission Travel & Pilgrimage",
+      "image": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
+      "description": "Sunspots Holidays has developed packages that make it easier for your clients to experience life-changing spiritual travel. Whether they're headed to Africa or Central or South America to provide."
+    },
+    {
+      "id": "service-4",
+      "title": "Positive Destination Ideas",
+      "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
+      "description": "Jet away to any city in the world for a quick trip packed with fun and excitement! Soak up the entertainment in New York City, tour the historic and hilly San Francisco Bay Area."
+    },
+    {
+      "id": "service-5",
+      "title": "TrueSun Rewards",
+      "image": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80",
+      "description": "Agents can collect booking incentives in the form of money, gift cards or travel credits for every booking with Sunspots Holidays, or they can donate the value to their favourite charities!"
+    }
+  ],
+  "created": "2024-01-20T10:00:00Z",
+  "changed": "2024-01-20T10:00:00Z"
+},
     {
       "id": "14",
       "title": "Land Partners",

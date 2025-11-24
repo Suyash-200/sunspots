@@ -58,12 +58,11 @@
 .about-section__text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .about-section__paragraph {
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: 1.25rem;
   color: #475569;
   text-align: justify;
 }

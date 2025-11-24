@@ -5,9 +5,38 @@
 }
 
 .special-deals-section {
+  position: relative; /* required for ::before / ::after */
   padding: 45px 30px;
-  background: linear-gradient(135deg, #fff9f0 0%, #fff5eb 100%);
+  /* background: linear-gradient(135deg, #fff9f0 0%, #fff5eb 100%); */
+  overflow: hidden; /* prevent the circles from overflowing */
 }
+
+/* Decorative glowing circles */
+.special-deals-section::before,
+.special-deals-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.special-deals-section::before {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #0ea5e9 0%, transparent 70%);
+  top: -300px;
+  left: -200px;
+}
+
+.special-deals-section::after {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #23317e 0%, transparent 70%);
+  bottom: -250px;
+  right: -150px;
+}
+
 
 .special-deals-section__header {
   text-align: center;
