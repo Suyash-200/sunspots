@@ -27,12 +27,12 @@
 }
 
 .about-section__title {
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 1rem;
   font-family: var(--font-heading);
-  background: #23317e;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

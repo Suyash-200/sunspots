@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   touch-action: pan-y pinch-zoom;
 }
@@ -36,6 +36,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .hero-carousel__overlay {
@@ -44,7 +45,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(44, 62, 80, 0.6) 0%, rgba(142, 68, 173, 0.4) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.1) 30%,
+    rgba(0, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
 .hero-carousel__content {
@@ -129,18 +136,8 @@
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-    z-index: 9999999999; /* Increased z-index */
+  z-index: 9999999999; /* Increased z-index */
   position: relative; /* Ensure z-index works */
-}
-
-/* Temporary debug styles */
-.hero-carousel__button {
-  border: 2px solid red !important; /* Temporary to see button boundaries */
-  background: rgba(255, 0, 0, 0.3) !important; /* Temporary to see button area */
-}
-
-.hero-carousel__controls {
-  border: 2px solid blue !important; /* Temporary to see controls boundaries */
 }
 
 .hero-carousel__dot--active {

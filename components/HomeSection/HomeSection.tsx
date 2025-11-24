@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutMedia, AboutStat, Paragraph, AirPartner, SpecialDeal,  } from '@/lib/types';
+import { AboutMedia, AboutStat, Paragraph, AirPartner, SpecialDeal, Service } from '@/lib/types';
 import './HomeSection.css';
 import HeroCarousel, { CarouselItem } from '../HeroCarousel/HeroCarousel';
 import AboutSection from '../AboutSection/AboutSection';
@@ -70,7 +70,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({
         ) : null}
         
         {/* Hero Content Overlay - Ensure it doesn't block carousel controls */}
-        <div className="home-section__content" style={{ pointerEvents: 'none', zIndex: 2 }}>
+        <div className="home-section__content">
           {renderContent()}
         </div>
       </section>

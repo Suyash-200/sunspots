@@ -1,11 +1,12 @@
 // components/ServicesSection/ServicesSection.tsx
-import React from 'react';
+"use client"
+
 import './ServicesSection.css';
 
 export interface Service {
   id: string;
   title: string;
-  icon: string;
+  image: string;
   description: string;
 }
 
@@ -28,7 +29,11 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({
         <div className="services-section__grid">
           {services.map((service) => (
             <div key={service.id} className="services-section__card">
-              <div className="services-section__icon">{service.icon}</div>
+              <img 
+                src={service.image} 
+                alt={service.title}
+                className="services-section__image"
+              />
               <h3 className="services-section__service-title">{service.title}</h3>
               <p className="services-section__description">{service.description}</p>
             </div>

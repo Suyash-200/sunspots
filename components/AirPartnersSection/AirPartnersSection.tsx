@@ -1,4 +1,5 @@
 // components/AirPartnersSection/AirPartnersSection.tsx
+'use client'
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './AirPartnersSection.css';
@@ -180,12 +181,6 @@ const AirPartnersSection: React.FC<AirPartnersSectionProps> = ({
               className="air-partners-section__nav air-partners-section__nav--prev"
               onClick={handlePrev}
               aria-label="Previous partners"
-              whileHover={{ 
-                scale: 1.1,
-                backgroundColor: "#6366f1",
-                color: "white"
-              }}
-              whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <FaChevronLeft size={20} />
@@ -269,12 +264,6 @@ const AirPartnersSection: React.FC<AirPartnersSectionProps> = ({
               className="air-partners-section__nav air-partners-section__nav--next"
               onClick={handleNext}
               aria-label="Next partners"
-              whileHover={{ 
-                scale: 1.1,
-                backgroundColor: "#6366f1",
-                color: "white"
-              }}
-              whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <FaChevronRight size={20} />
@@ -294,10 +283,6 @@ const AirPartnersSection: React.FC<AirPartnersSectionProps> = ({
                 aria-label={`Go to slide ${index + 1}`}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
-                animate={{
-                  scale: index === currentIndex ? 1.2 : 1,
-                  backgroundColor: index === currentIndex ? '#6366f1' : '#cbd5e1'
-                }}
                 transition={{ 
                   type: "spring",
                   stiffness: 500,

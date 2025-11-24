@@ -8,25 +8,13 @@
         {
           "id": "1",
           "title": "hero-main",
-          "body": "<h1>Discover Tailor-Made Travel</h1><p class=\"hero-subtitle\">Trust Sleepers Holidays' 55 years of experience planning trips to 115 countries on all 7 continents.</p>",
+          "body": "<h1>Awesome Airlines - Beautiful Places.</h1><p class=\"hero-subtitle\">Our partnership with more than 40 major international air carriers is the backbone of our enterprise, helping us take your clients around the world.</p>",
           "body_format": "full_html"
         },
         {
           "id": "2",
           "title": "hero-cta-primary",
           "body": "<a href=\"/contact\" class=\"btn btn-primary\">Start Planning Trip</a>",
-          "body_format": "full_html"
-        },
-        {
-          "id": "3",
-          "title": "hero-cta-secondary",
-          "body": "<a href=\"/destinations\" class=\"btn btn-secondary\">Explore Destinations</a>",
-          "body_format": "full_html"
-        },
-        {
-          "id": "37",
-          "title": "hero-trust-indicators",
-          "body": "<div class=\"hero-trust-indicators\"><div class=\"trust-indicator\"><div class=\"trust-number\">55</div><div class=\"trust-label\">Years of Experience</div></div><div class=\"trust-indicator\"><div class=\"trust-number\">115</div><div class=\"trust-label\">Countries</div></div><div class=\"trust-indicator\"><div class=\"trust-number\">7</div><div class=\"trust-label\">Continents</div></div><div class=\"trust-indicator\"><div class=\"trust-rating\">★★★★★</div><div class=\"trust-label\">4.8/5 TrustPilot</div></div></div>",
           "body_format": "full_html"
         }
       ],
@@ -93,36 +81,6 @@
       "id": "47",
       "title": "about-products",
       "body": "Unique products are what set us apart. Our branded Sun Magic and Positive Destination Ideas lines offer clients short stays in Europe, the United States, Canada, Latin America, some 36 destinations in the Caribbean, and the Maldives and Kerala, India. Our new Mission Travel and Pilgrimage packages make planning easy for people who want to help others or embark on a spiritual journey. We also offer a variety of group packages, wedding packages, and much more.",
-      "body_format": "plain_text"
-    },
-    {
-      "id": "48",
-      "title": "about-business-model",
-      "body": "Sunspots Holidays' model builds partnerships with consolidated airlines and land package providers to create travel opportunities that benefit airlines and enable travel agents to increase revenues during the off season. These benefits also reduce costs, which allows consumers to travel to unimaginably beautiful places at a very imaginable cost.",
-      "body_format": "plain_text"
-    },
-    {
-      "id": "49",
-      "title": "about-airline-partners",
-      "body": "Our partnership with more than 40 major international air carriers is the backbone of our enterprise, helping us take your clients around the world. Air partners include: American Airlines, US Airways, Delta Airlines, BMI, Czech Airlines, Lot Polish Airlines, LAN, TAM, TACA, Aerolineas Argentinas, Malev Hungarian Airlines, Srilankan Airlines, Etihad Airways, and many more.",
-      "body_format": "plain_text"
-    },
-    {
-      "id": "50",
-      "title": "about-flexibility",
-      "body": "We have developed a proactive and flexible product, offering land and air components together, as well as separately. We market our unique products across Canada, the United States, and internationally, and we can service any points worldwide.",
-      "body_format": "plain_text"
-    },
-    {
-      "id": "51",
-      "title": "about-success-factors",
-      "body": "The incredible success of Sunspots Holidays is a result of our commitment to customer service, steadfast belief in quality products, unswerving loyalty to our partners at all levels, and continuous marketing innovations that keep us moving forward.",
-      "body_format": "plain_text"
-    },
-    {
-      "id": "52",
-      "title": "about-pillars",
-      "body": "Energy, experience, and innovation are the pillars that have allowed us to excel in the travel industry. We invite you to join us on our ride around the world.",
       "body_format": "plain_text"
     }
   ],
@@ -339,7 +297,7 @@
           "image": "https://sunspotsholidays.com/images/temp/thumb-1.jpg",
           "url": "https://sunspotsholidays.com/groups_new.asp",
           "description": "",
-          "button_text": "more details"
+          "button_text": "More Details"
         },
         {
           "id": "deal-2",
@@ -347,7 +305,7 @@
           "image": "https://sunspotsholidays.com/images/temp/thumb-2.jpg",
           "url": "https://sunspotsholidays.com/Newyork.asp",
           "description": "",
-          "button_text": "more details"
+          "button_text": "More Details"
         },
         {
           "id": "deal-3",
@@ -355,7 +313,7 @@
           "image": "https://sunspotsholidays.com/images/temp/thumb-3.jpg",
           "url": "https://sunspotsholidays.com/TSRewards.asp",
           "description": "",
-          "button_text": "more details"
+          "button_text": "More Details"
         }
       ],
       "created": "2024-01-20T10:00:00Z",
@@ -366,38 +324,38 @@
       "title": "Our Services",
       "section_type": "services",
       "paragraphs": [],
-      "services": [
-        {
-          "id": "service-1",
-          "title": "Sunspots Holidays",
-          "icon": "🌴",
-          "description": "Awesome airlines, beautiful places – that's the Sunspots Holidays experience! Your clients will fall in love with our unique specialty packages that span the globe. From our hallmark Sun Magic and Positive Destination Ideas lines, to weddings, group travel and our new Mission Holidays line, there's something for everyone."
-        },
-        {
-          "id": "service-2",
-          "title": "Sun Magic",
-          "icon": "☀️",
-          "description": "The sun is always calling! Let Sunspots Holidays whisk your clients away to the beautiful beaches of the Caribbean, Latin America, the Maldives or Kerala, India. Our signature blend of romance, rejuvenation and exotic locales is the perfect antidote to your clients' hectic daily schedule."
-        },
-        {
-          "id": "service-3",
-          "title": "Mission Travel & Pilgrimage",
-          "icon": "🙏",
-          "description": "Sunspots Holidays has developed packages that make it easier for your clients to experience life-changing spiritual travel. Whether they're headed to Africa or Central or South America to provide humanitarian aid or build homes or schools, or are embarking on a deeply personal pilgrimage to a holy shrine, we can help them get there."
-        },
-        {
-          "id": "service-4",
-          "title": "Positive Destination Ideas",
-          "icon": "🏙️",
-          "description": "Jet away to any city in the world for a quick trip packed with fun and excitement! Soak up the entertainment in New York City, tour the historic and hilly San Francisco Bay Area, or bask in the old world charm of Vienna. We offer packages to more than 100 U.S. cities, over 40 Latin American urban centers, and 30-plus cities in Europe."
-        },
-        {
-          "id": "service-5",
-          "title": "TrueSun Rewards",
-          "icon": "🎁",
-          "description": "Agents can collect booking incentives in the form of money, gift cards or travel credits for every booking with Sunspots Holidays, or they can donate the value to their favourite charities!"
-        }
-      ],
+"services": [
+  {
+    "id": "service-1",
+    "title": "Sunspots Holidays",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
+    "description": "Awesome airlines, beautiful places – that's the Sunspots Holidays experience! Your clients will fall in love with our unique specialty packages that span the globe. From our hallmark Sun Magic and Positive Destination Ideas lines, to weddings, group travel and our new Mission Holidays line, there's something for everyone."
+  },
+  {
+    "id": "service-2",
+    "title": "Sun Magic",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    "description": "The sun is always calling! Let Sunspots Holidays whisk your clients away to the beautiful beaches of the Caribbean, Latin America, the Maldives or Kerala, India. Our signature blend of romance, rejuvenation and exotic locales is the perfect antidote to your clients' hectic daily schedule."
+  },
+  {
+    "id": "service-3",
+    "title": "Mission Travel & Pilgrimage",
+    "image": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
+    "description": "Sunspots Holidays has developed packages that make it easier for your clients to experience life-changing spiritual travel. Whether they're headed to Africa or Central or South America to provide humanitarian aid or build homes or schools, or are embarking on a deeply personal pilgrimage to a holy shrine, we can help them get there."
+  },
+  {
+    "id": "service-4",
+    "title": "Positive Destination Ideas",
+    "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
+    "description": "Jet away to any city in the world for a quick trip packed with fun and excitement! Soak up the entertainment in New York City, tour the historic and hilly San Francisco Bay Area, or bask in the old world charm of Vienna. We offer packages to more than 100 U.S. cities, over 40 Latin American urban centers, and 30-plus cities in Europe."
+  },
+  {
+    "id": "service-5",
+    "title": "TrueSun Rewards",
+    "image": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80",
+    "description": "Agents can collect booking incentives in the form of money, gift cards or travel credits for every booking with Sunspots Holidays, or they can donate the value to their favourite charities!"
+  }
+],
       "created": "2024-01-20T10:00:00Z",
       "changed": "2024-01-20T10:00:00Z"
     },

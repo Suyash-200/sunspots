@@ -1,6 +1,5 @@
 // components/LandPartnersSection/LandPartnersSection.tsx
-import React from 'react';
-import Image from 'next/image';
+"use client"
 import './LandPartnersSection.css';
 
 export interface LandPartnersSectionProps {
@@ -20,11 +19,9 @@ const LandPartnersSection: React.FC<LandPartnersSectionProps> = ({
         </div>
         
         <div className="land-partners-section__image-container">
-          <Image
+          <img
             src={image}
             alt={title}
-            width={800}
-            height={400}
             className="land-partners-section__image"
           />
         </div>

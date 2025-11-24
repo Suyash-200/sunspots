@@ -40,6 +40,27 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: 'react',
     }),
+    // Define process.env for browser compatibility
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env': JSON.stringify({}),
+    }),
+    // Inject process polyfill at the top of the bundle
+    new webpack.BannerPlugin({
+      banner: `
+        if (typeof window !== 'undefined' && typeof process === 'undefined') {
+          window.process = { env: { NODE_ENV: 'production' } };
+        }
+        if (typeof globalThis !== 'undefined' && typeof globalThis.process === 'undefined') {
+          globalThis.process = { env: { NODE_ENV: 'production' } };
+        }
+        if (typeof global !== 'undefined' && typeof global.process === 'undefined') {
+          global.process = { env: { NODE_ENV: 'production' } };
+        }
+      `,
+      raw: true,
+      entryOnly: true,
+    }),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],

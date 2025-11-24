@@ -16,22 +16,10 @@ interface NavigationProps {
 
 // Mock navigation data - can be replaced with API call later
 const mockNavigation: NavigationItem[] = [
+  { title: 'Home', url: '/' },
   {
     title: 'About',
-    url: '/destinations',
-    children: [
-      { title: 'OUR TEAM', url: '/destinations/africa' },
-      { title: 'PARTNERS', url: '/destinations/arctic' },
-      { title: 'CAREERS', url: '/destinations/asia' },
-      { title: 'TESTIMONIAL', url: '/destinations/australia' },
-      // { title: 'Central America', url: '/destinations/central-america' },
-      // { title: 'Europe', url: '/destinations/europe' },
-      // { title: 'Indian Ocean', url: '/destinations/indian-ocean' },
-      // { title: 'Middle East', url: '/destinations/middle-east' },
-      // { title: 'South America', url: '/destinations/south-america' },
-      // { title: 'South Pacific', url: '/destinations/south-pacific' },
-      // { title: 'US & Canada', url: '/destinations/us-canada' },
-    ],
+    url: '/about'
   },
   {
     title: 'Special Packages',
@@ -52,20 +40,16 @@ const mockNavigation: NavigationItem[] = [
     url: '/inspiration',
   },
   {
-    title: 'Weekly E-Flyers',
-    url: '/specials',
-  },
-  {
     title: 'Groups',
     url: '/about',
   },
   {
     title: 'E-Brochure',
     url: '/contact',
-  },
-  {
-    title: 'Truesun Rewards',
-    url: '/contact',
+    children: [
+      { title: 'Weekly E-Flyers', url: '/' },
+      { title: 'Truesun Rewards', url: '/' },
+    ],
   },
   {
     title: 'PNR Transfer',
@@ -85,13 +69,23 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
 
   // Add Home to menu items
   const allMenuItems: NavigationItem[] = [
-    { title: 'Home', url: '/' },
     ...menuItems,
   ];
 
   const isActive = (url: string): boolean => {
     if (typeof window === 'undefined') return false;
-    return window.location.pathname === url || window.location.pathname.startsWith(url + '/');
+    const currentPath = window.location.pathname;
+    
+    // Remove trailing slashes for comparison
+    const normalizedPath = currentPath.endsWith('/') && currentPath !== '/' 
+      ? currentPath.slice(0, -1) 
+      : currentPath;
+    const normalizedUrl = url.endsWith('/') && url !== '/' 
+      ? url.slice(0, -1) 
+      : url;
+    
+    // Exact match
+    return normalizedPath === normalizedUrl;
   };
 
   const handleSubmenuToggle = (title: string) => {
@@ -150,4 +144,3 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
 };
 
 export default Navigation;
-

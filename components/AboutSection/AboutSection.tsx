@@ -1,6 +1,6 @@
 // components/AboutSection/AboutSection.tsx
+'use client'
 import React from 'react';
-import Image from 'next/image';
 import './AboutSection.css';
 import { AboutParagraph, AboutSectionProps } from '@/lib/types';
 
@@ -49,12 +49,16 @@ const AboutSection: React.FC<AboutSectionProps> = ({
       // For images
       return (
         <div key={item.id} className="about-section__media about-section__image">
-          <Image
+          <img
             src={item.src}
             alt={item.alt || item.title || 'About section image'}
-            width={item.width || 600}
-            height={item.height || 400}
             className={item.class}
+            style={{
+              width: item.width ? `${item.width}px` : 'auto',
+              height: item.height ? `${item.height}px` : 'auto',
+              maxWidth: '100%',
+              height: 'auto'
+            }}
           />
         </div>
       );

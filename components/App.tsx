@@ -89,6 +89,12 @@ export default function App() {
           title={section.title}
           paragraphs={section.paragraphs}
           image={section.image}
+          carousel={section.carousel}
+          media={section.media}
+          stats={section.stats}
+          partners={section.partners}
+          deals={section.deals}
+          services={section.services}
         />
       )
     } else if (StaticComponent) {
@@ -105,51 +111,21 @@ export default function App() {
         <div className="home-page">
           {/* Hero Section */}
           {renderSection('hero')}
-          
-          {/* Welcome Section */}
-          {renderSection('welcome')}
-          
-          {/* Travel Styles Section */}
-          {renderSection('trip_styles')}
-          
-          {/* Destinations Section */}
-          {getSection('destinations') ? (
-            <>
-              {renderSection('destinations')}
-              {destinations.length > 0 && (
-                <section className="home-page__section home-page__section--destinations-grid">
-                  <div className="home-page__container">
-                    <DestinationsGrid destinations={destinations} />
-                  </div>
-                </section>
-              )}
-            </>
-          ) : (
-            <section className="home-page__section">
-              <div className="home-page__container">
-                <div className="home-page__section-header">
-                  <h2 className="home-page__section-title">Where are you headed to next?</h2>
-                  <p className="home-page__section-subtitle">Top Places To Travel</p>
-                </div>
-                <DestinationsGrid destinations={destinations} />
-              </div>
-            </section>
-          )}
-          
-          {/* Travel Inspiration Section */}
-          {renderSection('travel_inspiration')}
-          
-          {/* Testimonials Section */}
-          {renderSection('testimonials')}
-          
-          {/* Specials Section */}
-          {renderSection('specials')}
-          
-          {/* Newsletter Section */}
-          {renderSection('newsletter')}
-          
-          {/* Start Planning Section */}
-          {renderSection('start_planning')}
+
+          {/* About Section */}
+          {renderSection('about')}
+
+          {/* Air Partners Section */}
+          {renderSection('air_partners')}
+
+          {/* Special Deals Section */}
+          {renderSection('special_deals')}
+
+          {/* Services Section */}
+          {renderSection('services')}
+
+          {/* Land Partners Section */}
+          {renderSection('land_partners')}
         </div>
       </main>
       <Footer />

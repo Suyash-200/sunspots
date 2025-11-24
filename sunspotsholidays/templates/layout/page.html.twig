@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override to display the main page.
+ *
+ * Available variables:
+ * - page: The rendered page content.
+ * - is_front: Boolean indicating if this is the front page.
+ * - show_react_app: Boolean indicating if React app should be shown (set by hook).
+ */
+#}
+<div class="sunspots-holidays-page">
+  {% if show_react_app %}
+    {# React App Container - This is where the React app will mount #}
+    <div id="react-app"></div>
+
+    {# Fallback content for non-JS users #}
+    <noscript>
+      <div class="no-js-message" style="padding: 2rem; text-align: center; background: #f0f0f0; margin: 2rem 0;">
+        <h1>Sunspots Holidays</h1>
+        <p>Please enable JavaScript to view this website.</p>
+        <p>For the best experience, please enable JavaScript in your browser settings.</p>
+      </div>
+    </noscript>
+
+    {# Loading indicator - shown while React app initializes #}
+    <div id="react-app-loading" style="display: none; padding: 3rem; text-align: center;">
+      <div style="font-size: 1.125rem; color: #666;">Loading...</div>
+    </div>
+  {% endif %}
+
+  {# Drupal regions - can be used for hybrid mode if needed #}
+  {% if not show_react_app %}
+    <div class="drupal-regions">
+      {{ page.header }}
+      {{ page.navigation }}
+      {{ page.breadcrumb }}
+      {{ page.highlighted }}
+      {{ page.help }}
+      {{ page.content }}
+      {{ page.sidebar_first }}
+      {{ page.sidebar_second }}
+      {{ page.footer }}
+    </div>
+  {% else %}
+    <div class="drupal-regions" style="display: none;">
+      {{ page.header }}
+      {{ page.navigation }}
+      {{ page.breadcrumb }}
+      {{ page.highlighted }}
+      {{ page.help }}
+      {{ page.content }}
+      {{ page.sidebar_first }}
+      {{ page.sidebar_second }}
+      {{ page.footer }}
+    </div>
+  {% endif %}
+</div>
+

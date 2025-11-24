@@ -25,6 +25,7 @@ export interface HomeSection {
   created?: string;
   changed?: string;
   carousel?: CarouselItem[]; 
+  partners?: AirPartner[];
   deals?: SpecialDeal[];
   services?: Service[];
 }

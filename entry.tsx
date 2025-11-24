@@ -3,6 +3,23 @@
  * Works both standalone and embedded in Drupal
  */
 
+// Polyfill process global for browser compatibility
+if (typeof window !== 'undefined' && typeof process === 'undefined') {
+  (window as any).process = {
+    env: {
+      NODE_ENV: 'production'
+    }
+  }
+}
+// Also define on globalThis for webpack
+if (typeof globalThis !== 'undefined' && typeof (globalThis as any).process === 'undefined') {
+  (globalThis as any).process = {
+    env: {
+      NODE_ENV: 'production'
+    }
+  }
+}
+
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './components/App'

@@ -376,7 +376,8 @@ body {
   overflow: hidden;
 }
 
-.home-section--hero::before {
+/* REMOVED - Delete this entire ::before block */
+/* .home-section--hero::before {
   content: '';
   position: absolute;
   top: 0;
@@ -387,7 +388,7 @@ body {
   opacity: 0.1;
   z-index: 1;
   animation: pulse 4s ease-in-out infinite;
-}
+} */
 
 .home-section--hero .home-section__image {
   position: absolute;
@@ -406,7 +407,8 @@ body {
   transform: scale(1.1);
 }
 
-.home-section--hero::after {
+/* REMOVED - Delete this entire ::after block */
+/* .home-section--hero::after {
   content: '';
   position: absolute;
   top: 0;
@@ -415,7 +417,7 @@ body {
   bottom: 0;
   background: transparent;
   z-index: 1;
-}
+} */
 
 .home-section--hero .home-section__content {
   position: relative;
@@ -426,7 +428,7 @@ body {
 }
 
 .home-section--hero .home-section__paragraph-body h1 {
-  font-size: clamp(2rem, 6vw, 5rem);
+  font-size: clamp(2rem, 5vw, 5rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -436,11 +438,11 @@ body {
 }
 
 .home-section--hero .hero-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   margin-bottom: 2rem;
   color: #ffffff !important;
   line-height: 1.6;
-  max-width: 700px;
+  max-width: 870px;
   margin-left: auto;
   margin-right: auto;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);

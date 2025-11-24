@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         <div className="header__logo">
           <a href="/" className="header__logo-link">
             <img 
-              src="https://sunspotsholidays.com/images/Sunspots2018.jpg" 
+              src="/logo.png" 
               alt="Sunspots Holidays" 
               className="header__logo-image"
             />

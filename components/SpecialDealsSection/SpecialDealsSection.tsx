@@ -1,6 +1,5 @@
 // components/SpecialDealsSection/SpecialDealsSection.tsx
-import React from 'react';
-import Image from 'next/image';
+"use client"
 import './SpecialDealsSection.css';
 
 export interface SpecialDeal {
@@ -32,15 +31,13 @@ const SpecialDealsSection: React.FC<SpecialDealsSectionProps> = ({
           {deals.map((deal) => (
             <div key={deal.id} className="special-deals-section__card">
               <div className="special-deals-section__image-container">
-                <Image
+                <img
                   src={deal.image}
                   alt={deal.title}
-                  width={400}
-                  height={250}
                   className="special-deals-section__image"
                 />
                 <div className="special-deals-section__overlay">
-                  <span className="special-deals-section__icon">✨</span>
+                  {/* <span className="special-deals-section__icon">✨</span> */}
                 </div>
               </div>
               

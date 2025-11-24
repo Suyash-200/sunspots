@@ -6,6 +6,7 @@ import { fetchHomeSections } from "@/lib/api";
 import { HomeSection as HomeSectionType } from "@/lib/types";
 import { getSampleData, getSampleDestinations } from "@/lib/data";
 import { initScrollAnimations } from "@/lib/scrollAnimations";
+import DestinationsSlider from "@/components/DestinationsSlider/DestinationsSlider";
 import WelcomeSection from "@/components/WelcomeSection/WelcomeSection";
 import "./page.css";
 
@@ -99,6 +100,28 @@ export default function HomePage() {
 
       {/* Special Deals Section */}
       {renderSection("special_deals")}
+
+      {/* Destinations Slider Section */}
+      {destinations.length > 0 && (
+        <section className="home-page__section home-page__section--destinations">
+          <div className="home-page__container">
+            <div className="home-page__section-header">
+              <h2 className="home-page__section-title">
+                Popular Destinations
+              </h2>
+              <p className="home-page__section-subtitle">
+                Explore amazing places around the world
+              </p>
+            </div>
+            <DestinationsSlider 
+              destinations={destinations}
+              slidesToShow={3}
+              autoplay={true}
+              autoplayInterval={5000}
+            />
+          </div>
+        </section>
+      )}
 
       {/* Services Section */}
       {renderSection("services")}

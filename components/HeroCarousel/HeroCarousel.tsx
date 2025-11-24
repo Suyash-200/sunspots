@@ -1,7 +1,6 @@
 // components/HeroCarousel/HeroCarousel.tsx
-"use client";
+'use client'
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import './HeroCarousel.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
@@ -75,15 +74,11 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({
               index === currentSlide ? 'hero-carousel__slide--active' : ''
             }`}
           >
-            <Image
+            <img
               src={item.image}
               alt={item.alt}
-              fill
               className="hero-carousel__image"
-              priority={index === 0}
-              quality={85}
-              sizes="100vw"
-              style={{ objectFit: 'cover' }}
+              loading={index === 0 ? 'eager' : 'lazy'}
             />
             <div className="hero-carousel__overlay" />
             
